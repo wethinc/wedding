@@ -425,8 +425,8 @@
             }
         }
         //countdown
-        var Mar = new Date('2021-05-21T21:30:00');
-        var Din = new Date('2022-05-22T20:30:00');
+        var Mar = new Date('2024-01-14T21:30:00');
+        var Din = new Date('2024-01-15T20:30:00');
         var now = new Date();
         var Bmar = new Date(Mar.getTime() - (12 * 60 * 60 * 1000));
         var Amar = new Date(Mar.getTime() + (12 * 60 * 60 * 1000));
@@ -450,9 +450,7 @@
         var url_string = window.location.href;
         var url = new URL(url_string);
         A = url.searchParams.get("A");
-        B = url.searchParams.get("B");
-        if (url.searchParams.has('D') === true) {
-            D = url.searchParams.get("D");
+        B = url.searchParams.get("B"); D = 1;
             var now = new Date();
             if (D == 1) {
                 var Mar = new Date(now.getTime() + (10 * 24 * 60 * 60 * 1000));
@@ -475,8 +473,7 @@
             var Amar = new Date(Mar.getTime() + (12 * 60 * 60 * 1000));
             var Bdin = new Date(Din.getTime() - (12 * 60 * 60 * 1000));
             var Adin = new Date(Din.getTime() + (12 * 60 * 60 * 1000));
-
-        }
+     
 
         var SeMal, SeFem;
         SeMal = document.getElementsByClassName("disSMal")
@@ -494,6 +491,7 @@
         }
         var Evn
         Evn = document.getElementsByClassName("Event")
+        B=1;
         if (B == 1) {
             claDisOpp(Evn);
             // code for Event-1
